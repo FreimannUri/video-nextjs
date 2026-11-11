@@ -145,7 +145,7 @@ export default function Stats() {
       className={`mx-auto mt-4 w-full max-w-160 ${offline ? "opacity-50" : ""}`}
     >
       <h2 className="mb-2 text-sm font-medium">
-        ESP32-S3 {offline && "(offline)"}
+        ESP32-S3 + OV5640 FullHD {offline && "(offline)"}
       </h2>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
         {CARDS.map((c) => {
