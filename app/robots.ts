@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       disallow: "/api/",
     },
     sitemap: "https://www.freimann.lv/sitemap.xml",
-    host: "https://www.freimann.lv",
+
+    // host: "https://www.freimann.lv",
   };
 }

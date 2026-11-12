@@ -3,7 +3,6 @@
 // import { SERVICES_DATA } from './assets/data';
 import Image from "next/image";
 import React from "react";
-import { motion } from "motion/react";
 
 import web from "./web.png";
 import mob from "./mob.png";
@@ -45,14 +44,7 @@ const Services = () => {
       </div>
       <div className=" grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
         {SERVICES_DATA.map(({ id, title, description, icon }) => (
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: id * 0.3 }}
-            key={id}
-            className=" border border-gray-400 rounded-lg px-8 py-12 cursor-pointer
-             hover:-translate-y-3 transition duration-500"
-          >
+          <div>
             <div className=" bg-[#1f1f1f] rounded-lg w-14 h-14 flex items-center justify-center">
               <Image src={icon} alt={title} className=" w-10 h-10" />
             </div>
@@ -64,7 +56,7 @@ const Services = () => {
             >
               Read More
             </a>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

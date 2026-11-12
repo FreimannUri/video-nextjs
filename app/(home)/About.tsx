@@ -4,7 +4,6 @@ import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import aboutImage from "./assets/about.jpg";
 // import { TAB_DATA } from './assets/data';
-import { motion } from "motion/react";
 
 const TAB_DATA = [
   {
@@ -56,19 +55,10 @@ const About = () => {
         className=" md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16
        sm:py-16 xl:px-16"
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div>
           <Image src={aboutImage} width={500} height={400} alt="about image" />
-        </motion.div>
-        <motion.div
-          className=" mt-4 md:mt-0 text-left flex flex-col h-full"
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        </div>
+        <div>
           <h2 className=" text-4xl font-bold text-white mb-4">About Me</h2>
           <p className=" text-base lg:text-lg">
             I am a Frontend & Mobile Developer with expertise in React, Next.js,
@@ -86,11 +76,6 @@ const About = () => {
                 >
                   {title}
                 </p>
-                <motion.div
-                  animate={tab == id ? "active" : "default"}
-                  variants={variants}
-                  className=" h-1 bg-[#00adb5] mt-2 mr-3"
-                />
               </button>
             ))}
           </div>
@@ -101,7 +86,7 @@ const About = () => {
               ))}
             </ul>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
