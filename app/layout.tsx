@@ -1,8 +1,8 @@
-import "@/app/globals.css";
 import { Metadata } from "next";
 import { ThemeProvider } from "@wrksz/themes/next";
-import { ThemeToggle } from "@/app/ThemeToggle";
-import Link from "next/link";
+
+import "./globals.css";
+import { AppBar } from "./AppBar";
 
 const siteUrl = "https://www.freimann.lv";
 const siteName = "Uri Freimann";
@@ -38,7 +38,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Uri Freimann",
-  alternateName: ["FreimannUri", "Uris Freimanis", "Iurii Korotkov"],
+  alternateName: ["uri-freimann", "Uris Freimanis", "Iurii Korotkov"],
   url: siteUrl,
   jobTitle: "Embedded Rust Engineer",
   knowsAbout: [
@@ -83,7 +83,7 @@ const personJsonLd = {
     "Expo framework",
   ],
   sameAs: [
-    "https://github.com/FreimannUri",
+    "https://github.com/uri-freimann",
     "https://www.linkedin.com/in/uri-freimann-aa661b359/",
   ],
 };
@@ -118,26 +118,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="flex h-16 items-center bg-secondary px-4 justify-between">
+          {/* <header className="flex h-16 items-center bg-secondary px-4 justify-between">
+            <Nav />
             <ThemeToggle />
-
-            <nav className="flex items-center gap-4">
-              {navItems.map((item, key) => (
-                <Link
-                  key={item.url}
-                  href={item.url}
-                  className="inline-flex h-10 items-center justify-center rounded-md
-                   border border-input bg-background px-4 text-base font-medium ring-offset-background
-                    transition-colors hover:bg-accent hover:text-accent-foreground 
-                    focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </nav>
           </header>
+          <main className="w-screen">{children}</main> */}
 
-          <main className="w-screen">{children}</main>
+          <AppBar />
+          <main className="w-screen pt-14 md:pl-30 md:pt-0">{children}</main>
         </ThemeProvider>
       </body>
     </html>

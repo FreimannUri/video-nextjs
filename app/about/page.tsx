@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Page title",
+  title: "About",
   description: "Page description",
   alternates: { canonical: "/path" },
 };
@@ -12,6 +12,16 @@ export default function Page() {
       <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
         About Page
       </h1>
+
+      <p className="mt-6">
+        <a
+          href="https://github.com/uri-freimann"
+          className="text-[#ab47bc] underline underline-offset-2 transition-colors hover:text-[#8e24aa] dark:text-[#ce93d8] dark:hover:text-[#ab47bc]"
+          rel="noopener"
+        >
+          github.com/uri-freimann
+        </a>
+      </p>
     </div>
   );
 }

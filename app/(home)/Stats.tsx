@@ -61,7 +61,9 @@ function Spark({ data }: { data: number[] }) {
     <svg
       viewBox="0 0 100 30"
       preserveAspectRatio="none"
-      className="h-8 w-full text-emerald-500"
+      // className="h-8 w-full text-emerald-500"
+      // className="h-8 w-full text-[#ab47bc]"
+      className="h-8 w-full text-[#808080]"
     >
       <polyline
         points={pts}
